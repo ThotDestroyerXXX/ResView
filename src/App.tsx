@@ -60,7 +60,11 @@ function App() {
           <div className='mx-auto px-4 py-8'>
             <Hero />
             <div className='gap-6 flex flex-col w-full max-w-[40rem] mx-auto'>
-              <DropzoneComponent setFile={setFile} disabled={isUploading} />
+              <DropzoneComponent
+                file={file}
+                setFile={setFile}
+                disabled={isUploading}
+              />
               {!!error && <p>{error}</p>}
               {!!file && file.length > 0 && (
                 <Button
